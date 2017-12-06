@@ -1,0 +1,51 @@
+main {
+	min-height: 500px;
+}
+/* NAVIGATION */
+.custom_bg {
+	color: #fff;
+	background-color: #3c5768 !important;
+}
+/*TITLE OF PAGE*/
+.title-of-page {
+	margin: 10px 0;
+}
+.title-of-page p {
+	font-size: 45px;
+	text-transform: uppercase;
+}
+/*INDEX PAGE*/
+.quiz-img img {
+	width: 100%;
+}
+.quiz-img {
+	overflow: hidden;
+}
+/*get started*/
+#get-started {
+	padding: 15px 0;
+}
+/* FOOTER */
+.header-bg {
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+	background: url(../images/background/index-main-area.png) no-repeat top center;
+	background-size: cover;
+	position: relative;
+}
+.overlay {
+	background-color: #0089ec36;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.index-main-area-bg {
+	position: absolute;
+	width: 100%;
+}
+.page-footer {
+	background-color: #3c5768;
+}
