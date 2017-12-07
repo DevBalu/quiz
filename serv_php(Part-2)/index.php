@@ -63,8 +63,8 @@
 				<!-- Tap Target Structure -->
 				<div class="tap-target" data-activates="menu">
 					<div class="tap-target-content">
-						<h5>HIN</h5>
-						<p>To start quiz tap on navbar button "QUIZ"</p>
+						<h5>HINT</h5>
+						<p>To start quiz tap in navbar button "QUIZ"</p>
 					</div>
 				</div>
 				<!-- END Notification -->

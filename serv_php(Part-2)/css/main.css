@@ -49,3 +49,19 @@ main {
 .page-footer {
 	background-color: #3c5768;
 }
+
+/*
+*
+* quiz-first-page
+*
+*/
+.fourthQ {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.fourthQ p {
+	margin-right: 20px;
+}

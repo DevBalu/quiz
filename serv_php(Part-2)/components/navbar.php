@@ -10,7 +10,7 @@
 		</ul>
 		<ul class="side-nav" id="mobile-demo">
 			<li><a href="index.php">HOME</a></li>
-			<li><a href="first-page.php">QUIZ</a></li>
+			<li><a href="quiz-first-page.php">QUIZ</a></li>
 			<li><a href="gallery.php">GALLERY</a></li>
 		</ul>
 	</div>
