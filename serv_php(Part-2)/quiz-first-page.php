@@ -33,7 +33,7 @@ $quetions = getAllQuestions();
 			<!-- END title of page -->
 
 			<!-- FORM -->
-			<form action="php/score.php?page=1" method="post">
+			<form action="php/validation_first_page.php" method="post">
 				<!-- first quetion -->
 				<div class="row">
 					<div class="col s12 l6">
@@ -122,18 +122,16 @@ $quetions = getAllQuestions();
 					<!-- answer -->
 					<div class="col s12 l6">
 						<h6>Choose all correct answers</h6>
-						<div class="fourthQ">
-							<?php
-								foreach ($quetions[3]->variants_of_answers as $key => $value) {
-									$count = $key + 1;
-									print '
-										<p>
-											<input type="checkbox" class="filled-in" id="fourth-'. $value .'" name="fourth-'. $count .'"/>
-											<label for="fourth-'. $value .'">'. $value .'</label>
-										</p>
-									';
-								}
-							?>
+						<div class="col s12">
+							<select name="fourth[]" multiple>
+								<option value="" disabled selected>Choose your option</option>
+								<?php
+									foreach ($quetions[3]->variants_of_answers as $key => $value) {
+										print '<option value="'. $value .'">'. $value .'</option>';
+									}
+								?>
+							</select>
+							<label>variants of answers</label>
 						</div>
 					</div>
 					<!-- END answer -->
@@ -141,7 +139,7 @@ $quetions = getAllQuestions();
 				<div class="divider"></div>
 				<!-- END fourth question -->
 
-				<!-- Fifth question -->
+				<!-- fifth question -->
 				<div class="row">
 					<br>
 					<div class="col s12 l6">
@@ -155,18 +153,16 @@ $quetions = getAllQuestions();
 					<!-- answer -->
 					<div class="col s12 l6">
 						<h6>Choose all correct answers</h6>
-						<div class="fourthQ">
-							<?php
-								foreach ($quetions[5]->variants_of_answers as $key => $value) {
-									$count = $key + 1;
-									print '
-										<p>
-											<input type="checkbox" class="filled-in" id="fifth-'. $value .'" name="fifth-'. $count .'"/>
-											<label for="fifth-'. $value .'">'. $value .'</label>
-										</p>
-									';
-								}
-							?>
+						<div class="col s12">
+							<select name="fifth[]" multiple>
+								<option value="" disabled selected>Choose your option</option>
+								<?php
+									foreach ($quetions[4]->variants_of_answers as $key => $value) {
+										print '<option value="'. $value .'">'. $value .'</option>';
+									}
+								?>
+							</select>
+							<label>variants of answers</label>
 						</div>
 					</div>
 					<!-- END answer -->
@@ -174,7 +170,6 @@ $quetions = getAllQuestions();
 				<div class="divider"></div>
 				<br>
 				<!-- END Fifth question -->
-
 
 				<div class="divider"></div>
 				<h5 class="flow-text center">After you answer the questions, click the "MORE" button</h5>

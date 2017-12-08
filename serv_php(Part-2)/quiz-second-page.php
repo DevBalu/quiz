@@ -34,8 +34,8 @@ $quetions = getAllQuestions();
 			<!-- END title of page -->
 
 			<!-- FORM -->
-			<form action="php/score.php" method="post">
-				<!-- six quetion -->
+			<form action="php/validation_second_page.php" method="post">
+				<!-- sixth quetion -->
 				<div class="row">
 					<div class="col s12 l6">
 						<div class="card-panel teal">
@@ -48,25 +48,24 @@ $quetions = getAllQuestions();
 					<!-- answer -->
 					<div class="col s12 l6">
 						<h6>choose all correct answers</h6>
-						<div class="fourthQ">
-							<?php
-								foreach ($quetions[5]->variants_of_answers as $key => $value) {
-									print '
-										<p>
-											<input type="checkbox" class="filled-in" id="'. $value .'" name="six-'. $value .'"/>
-											<label for="'. $value .'">'. $value .'</label>
-										</p>
-									';
-								}
-							?>
+						<div class="col s12">
+							<select name="sixth[]" multiple>
+								<option value="" disabled selected>Choose your option</option>
+								<?php
+									foreach ($quetions[5]->variants_of_answers as $key => $value) {
+										print '<option value="'. $value .'">'. $value .'</option>';
+									}
+								?>
+							</select>
+							<label>variants of answers</label>
 						</div>
 					</div>
 					<!-- END answer -->
 				</div>
 				<div class="divider"></div>
-				<!-- END six quetion -->
+				<!-- END sixth quetion -->
 
-				<!-- seven question -->
+				<!-- seventh question -->
 				<div class="row">
 					<br>
 					<div class="col s12 l6">
@@ -80,7 +79,7 @@ $quetions = getAllQuestions();
 					<!-- answer -->
 					<div class="col s12 l6">
 						<div class="input-field col s12">
-							<select name="seven">
+							<select name="seventh">
 								<option value="" disabled selected>Choose your option</option>
 								<?php
 									foreach ($quetions[6]->variants_of_answers as $key => $value) {
@@ -94,7 +93,7 @@ $quetions = getAllQuestions();
 					<!-- END answer -->
 				</div>
 				<div class="divider"></div>
-				<!-- END seven question -->
+				<!-- END seventh question -->
 
 				<!-- eight question -->
 				<div class="row">

@@ -1,47 +1,41 @@
 <?php 
 /*Start session*/
 session_start();
-
 /*
 * file have functio:
 *	getAllQuestions():void " which return arr with all objects with data from table with instruction "
 */
-require 'get_all_data_table.php';
-// recieve all questions
+require 'php/get_all_data_table.php';
+
 $quetions = getAllQuestions();
 
-/*
-* file have function hex2rgb() which receive as a parameter color Hex and return arr[] with rgb color
-*/
-require 'hex2rgb.php';
 
-
-/*
-*
-* The whole evaluation logic will be built in three stages
-*
-*/
-
-
-
-/* answers of questions*/
-// (text) $first
-$first = $_POST['first'];
-// (text) $second get Hex color 
-$second = $_POST['second'];
-// (text) $third get
-$third = $_POST['third'];
-
-
-// fourth
-$fourth = [];
-$fourthAnswersCount = sizeof($quetions[3]->variants_of_answers);
-
-for($i = 1; $i < $fourthAnswersCount+1; $i++){
-	$one_of_answers = $_POST['fourth-'. $i];
-	$fourth[] = $one_of_answers;
+$final_result = [];
+// push data from first page in arr
+foreach ($_SESSION['quiz-first-page-result'] as $key => $value) {
+	$final_result[] = $value;
+}
+// push data from second page in arr
+foreach ($_SESSION['quiz-second-page-result'] as $key => $value) {
+	$final_result[] = $value;
 }
 
-print_r($fourth);
-// END fourth
 
+$complete_assembly = [];
+$final_score = 0;
+foreach ($final_result as $key => $value) {
+	$assembly = $value;
+	if (!is_int($quetions[$key]->correct_answer) ) {
+		$assembly['correct_answer'] = implode(", ",$quetions[$key]->correct_answer);
+	}else {
+		$assembly['correct_answer'] = $quetions[$key]->correct_answer;
+	}
+
+	if ( is_array($assembly['you_answer']) ) {
+		$assembly['you_answer'] = implode(", ", $assembly['you_answer']);
+	}
+
+	$complete_assembly[] = $assembly;
+	$final_score += $assembly['count_points'];
+
+}

@@ -51,7 +51,7 @@
 			<section id="get-started">
 				<!-- button stepper -->
 				<div class="center">
-					<a class="waves-effect waves-light btn-large pulse blue-grey darken-2" onclick="hint()" class="getstart">get start the quiz</a>
+					<a class="waves-effect waves-light btn-large pulse blue-grey darken-2 getstart" onclick="hint()">get start the quiz</a>
 				</div>
 				<!-- End button stepper -->
 

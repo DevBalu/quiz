@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+// $('#anchor-tag').lightGallery();
 	$(".button-collapse").sideNav();
 
 

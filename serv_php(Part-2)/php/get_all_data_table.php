@@ -29,7 +29,7 @@ function getAllQuestions(){
 		// variants_of_answers
 		[],
 		// correct_answer
-		[255, 0, 0], //#ff0000 
+		['#ff0000'], //#ff0000 [255, 0, 0]
 		// points_correct_answer
 		10,
 		// nearly_correct_answer
@@ -125,7 +125,7 @@ function getAllQuestions(){
 		// variants_of_answers
 		[],
 		// correct_answer
-		[255, 255, 0], //#ffff00
+		['#ffff00'], //#ffff00 rgb [255, 255, 0]
 		// points_correct_answer
 		10,
 		// nearly_correct_answer
@@ -141,7 +141,7 @@ function getAllQuestions(){
 		// variants_of_answers
 		[],
 		// correct_answer
-		[1500],
+		1500,
 		// points_correct_answer
 		10,
 		// nearly_correct_answer
