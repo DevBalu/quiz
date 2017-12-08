@@ -56,7 +56,7 @@
 				<!-- End button stepper -->
 
 				<!-- Notification -->
-				<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+				<div class="fixed-action-btn notif">
 					<a id="menu" class="btn btn-floating btn-large blue-grey darken-2"><i class="material-icons">notifications_none</i></a>
 				</div>
 
@@ -86,5 +86,6 @@
 	<!-- scripts -->
 	<?php require 'components/scripts.php'; ?>
 	<!-- END scripts -->
+
 </body>
 </html>

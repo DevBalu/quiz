@@ -1,3 +1,10 @@
+<?php
+/*
+* Including file gallery_logic 
+* he contain main logic for functionality of gallery
+*/
+require 'php/gallery_logic.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,34 +29,39 @@
 			<!-- END title of page -->
 
 			<div class="row">
-				<div class="col l1 offset-l1">
-					<button class="btn waves-effect waves-light" type="submit" name="action">Nature</button>
-					<br>
-					<br>
-					<button class="btn waves-effect waves-light" type="submit" name="action">Nature</button>
+				<div class="col l1 offset-l1 s2">
+					<p class="flow-text">MENU</p>
+					<?php 
+						foreach ($menu as $key => $value) {
+							print '<a href=gallery.php?df='. $value .' class="btn waves-effect waves-light" name="action">'. $value .'</a><br><br>';
+						}
+					 ?>
+					
 				</div>
 
-				<div class="col l9  offset-l1">
-					<div class="col l4">
-						<a href="images/gallery/Nature/001.jpg">
-							<img src="images/gallery/Nature/thumbs/001.jpg" />
-						</a>
-					</div>
-					<div class="col l4">
-						<a href="images/gallery/Nature/001.jpg">
-							<img src="images/gallery/Nature/thumbs/001.jpg" />
-						</a>
-					</div>
-					<div class="col l4">
-						<a href="images/gallery/Nature/001.jpg">
-							<img src="images/gallery/Nature/thumbs/001.jpg" />
-						</a>
-					</div>	
+				<div class="col l9  offset-l1 s10">
+
+					<ul id="lightgallery" class="list-unstyled">
+						<?php
+
+							foreach ($thumbs as $key => $value) {
+								print '<li class="col l4 s4 thumbPhoto" 
+									data-src="images/gallery/'. $_GET['df'] . '/' . $value .'">
+									<a href="#">
+										<img class="img-responsive" src="images/gallery/'. $_GET['df'] . '/' . 'thumbs/'. $value .'" />
+									</a>
+								</li>';
+							}
+						?>
+						
+					</ul>
+
 				</div>
 			</div>
 
 		</div>
 	</main>
+
 	<!-- END main content areas -->
 
 	<!-- footer -->
@@ -59,5 +71,6 @@
 	<!-- scripts -->
 	<?php require 'components/scripts.php'; ?>
 	<!-- END scripts -->
+
 </body>
-</html>
+</html>	

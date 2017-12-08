@@ -21,6 +21,10 @@ main {
 .quiz-img {
 	overflow: hidden;
 }
+.notif {
+	bottom: 40px;
+	right: 40px;
+}
 /*get started*/
 #get-started {
 	padding: 15px 0;
@@ -74,4 +78,21 @@ main {
 */
 .seeRes {
 	text-transform: uppercase;
+}
+
+
+/*
+*
+* gallery
+*
+*/
+.thumbPhoto {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
 }

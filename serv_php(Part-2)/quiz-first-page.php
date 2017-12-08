@@ -171,19 +171,25 @@ $quetions = getAllQuestions();
 				<br>
 				<!-- END Fifth question -->
 
+				<!-- hint -->
 				<div class="divider"></div>
 				<h5 class="flow-text center">After you answer the questions, click the "MORE" button</h5>
 				<div class="divider"></div>
 				<br>
+				<!-- END hint -->
 
+				<!-- button more -->
 				<button class="btn waves-effect waves-light  blue-grey darken-2 right" type="submit" name="action">more
 					<i class="material-icons right">keyboard_arrow_right</i>
 				</button>
+				<!-- END button more -->
 			</form><!-- END FORM -->
 
+			<!-- indentation -->
 			<br>
 			<br>
 			<br>
+			<!-- ENDindentation -->
 
 		</div><!-- END container -->
 	</main>

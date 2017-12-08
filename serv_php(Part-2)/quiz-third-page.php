@@ -60,10 +60,13 @@ require 'php/score.php';
 			<a class="waves-effect waves-light btn-large pulse blue-grey darken-2 right" class="getstart">final score : <?php print $final_score . " Points"; ?></a>
 
 		</div><!-- END container -->
+
+		<!-- indentation -->
 		<br>
 		<br>
 		<br>
 		<br>
+		<!-- END indentation -->
 
 	</main>
 	<!-- END main content areas -->

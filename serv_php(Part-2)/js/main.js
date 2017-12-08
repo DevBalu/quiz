@@ -5,6 +5,8 @@ $( document ).ready(function() {
 
 	// select
 	 $('select').material_select();
+
+	lightGallery(document.getElementById('lightgallery'));
 });
 
 function hint(){
